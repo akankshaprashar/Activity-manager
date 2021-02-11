@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+body {
+  font-family: arial, sans-serif;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  /* background-color: rgb(117, 155, 173); */
+  background-image:url('pics/image1.jpg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header {
+  background: #264aad;
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  z-index: 10;
+  margin-left: -13px;
+}
+
+
+
+#sidebarMenu {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25rem;
+  margin-top: 6rem;
+  background: #22eebb;
+  transform: translateX(-25rem);
+  transition: transform 25ms ease-in-out;
+}
+#opensidebarMenu:checked ~ #sidebarMenu {
+  transform: translateX(0rem);
+}
+
+#opensidebarMenu {
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  padding: 2rem;
+  margin: 0rem;
+}
+.menu li {
+  color: #fff;
+  border-bottom: 0.1rem solid rgba black;
+}
+
+.menu li a {
+  color: black;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+.sidebarIconToggle {
+  width: 2.2rem;
+  height: 2.2rem;
+  position: absolute;
+  z-index: 20;
+  top: 2.2rem;
+  left: 1.5rem;
+  cursor: pointer;
+}
+
+.spinner {
+  height: 0.3rem;
+  background: black;
+  transition: all 0.3s;
+}
+.spinner.middle,
+.spinner.bottom {
+  margin-top: 0.3rem;
+}
+
+#opensidebarMenu:checked ~ .sidebarIconToggle > .spinner.spinner.middle {
+  opacity: 0;
+}
+#opensidebarMenu:checked ~ .sidebarIconToggle > .spinner.spinner.top {
+  transform: rotate(135deg);
+  margin-top: 0.8rem;
+}
+#opensidebarMenu:checked ~ .sidebarIconToggle > .spinner.spinner.bottom {
+  transform: rotate(-135deg);
+  margin-top: -0.9rem;
+}
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}

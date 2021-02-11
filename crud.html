@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="crud.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div class="header"></div>
+    
+    <input type="checkbox" id="opensidebarMenu" >
+    <label for="opensidebarMenu" class="sidebarIconToggle">
+      <div class="spinner top"></div>
+      <div class="spinner middle"></div>
+      <div class="spinner bottom"></div>
+    </label>
+    <div id="sidebarMenu">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="crud.html">Planned</a></li>
+        <li><a href="table.html">All Task</a></li>
+        <li><a href="cali.html">calendar</a></li>
+      </ul>
+    </div>
+    
+
+
+
+    <center>
+      
+      
+      <form id="form" action="#">
+        
+      <div id="cont">
+        <h2>crud</h2>
+        
+
+        
+        <input type="text" id="name" placeholder="Username" /><br /><br />
+        <span id="username" style="color: red;"></span>
+        <input type="date" id="date"  /><br /><br />
+        <select id="select">
+          <option>---</option>
+          <option>start</option>
+          <option>inprogress</option>
+          <option>complete</option>
+        </select><br><br>
+        <select id="myselect">
+          <option>---</option>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>high</option>
+        </select><br><br>
+        <button id="button">submit</button>
+        <button type="update" id="btn" onclick="onupdate()">update</button>
+        <button id="sort">sort</button>
+      </div  >
+
+
+      
+    </center>
+  </form>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    
+        <div id="contener">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Delete</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      </div>
+  </body> 
+  <script src="jquery-3.5.1.js" ></script>
+  <script src="script.js"></script>
+</html>
+
+
+
+
